@@ -107,9 +107,9 @@ bool GroupObjectTableObject::initGroupObjects()
         GroupObject& go = _groupObjects[asap - 1];
         go._asap = asap;
         go._table = this;
-        
+    
         go._dataLength = go.goSize();
-        go._data = new uint8_t[go._dataLength];
+        go._data = new uint8_t[go.sizeInMemory()];
         memset(go._data, 0, go._dataLength);
         
         if (go.valueReadOnInit())
