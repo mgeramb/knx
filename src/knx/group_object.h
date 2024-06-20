@@ -60,7 +60,10 @@ class GroupObject
     /**
      * The copy constructor.
      */
-    GroupObject(const GroupObject& other);
+    
+    // getting the sizeInMemory requires the _table object. For this reason, the copy constructor should not be used
+    //  GroupObject(const GroupObject& other);
+    
     /**
      * The destructor.
      */

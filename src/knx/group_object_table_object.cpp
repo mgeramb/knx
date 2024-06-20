@@ -109,8 +109,9 @@ bool GroupObjectTableObject::initGroupObjects()
         go._table = this;
     
         go._dataLength = go.goSize();
-        go._data = new uint8_t[go.sizeInMemory()];
-        memset(go._data, 0, go._dataLength);
+        size_t sizeInMemory = go.sizeInMemory();
+        go._data = new uint8_t[sizeInMemory];
+        memset(go._data, 0, sizeInMemory);
         
         if (go.valueReadOnInit())
             go.requestObjectRead();
