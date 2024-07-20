@@ -58,13 +58,6 @@ class GroupObject
      */
     GroupObject();
     /**
-     * The copy constructor.
-     */
-    
-    // getting the sizeInMemory requires the _table object. For this reason, the copy constructor should not be used
-    //  GroupObject(const GroupObject& other);
-    
-    /**
      * The destructor.
      */
     virtual ~GroupObject();

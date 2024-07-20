@@ -20,20 +20,6 @@ GroupObject::GroupObject()
 #endif
 }
 
-// getting the sizeInMemory requires the _table object. For this reason, the copy constructor should not be used.
-//
-// GroupObject::GroupObject(const GroupObject& other)
-// {
-//     _data = new uint8_t[other._table != nullptr ? other.sizeInMemory() : other._dataLength];
-//     _commFlagEx = other._commFlagEx;
-//     _dataLength = other._dataLength;
-//     _asap = other._asap;
-// #ifndef SMALL_GROUPOBJECT
-//     _updateHandler = other._updateHandler;
-// #endif
-//     memcpy(_data, other._data, _dataLength);
-// }
-
 GroupObject::~GroupObject()
 {
     if (_data)
